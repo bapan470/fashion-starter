@@ -3,6 +3,7 @@ checkEnvVariables()
 
 const nextConfig = {
   reactStrictMode: true,
+  output: "standalone",
   experimental: {
     staticGenerationRetryCount: 0,
     staticGenerationMaxConcurrency: 1,
