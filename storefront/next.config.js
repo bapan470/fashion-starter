@@ -1,15 +1,12 @@
 const checkEnvVariables = require("./check-env-variables")
-
 checkEnvVariables()
 
-/**
- * @type {import('next').NextConfig}
- */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    staticGenerationRetryCount: 3,
+    staticGenerationRetryCount: 0,
     staticGenerationMaxConcurrency: 1,
+    missingSuspenseWithCSRBailout: false,
   },
   images: {
     remotePatterns: [
@@ -24,5 +21,4 @@ const nextConfig = {
     ],
   },
 }
-
 module.exports = nextConfig
